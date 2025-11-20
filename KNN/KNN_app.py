@@ -26,7 +26,7 @@ if st.button("Predict"):
     pred = model.predict(scaled_input)[0]
 
     st.subheader("🔍 Prediction Result:")
-    st.success(f"The Scale is **{pred}ight sided**")
+    st.success(f"The Scale is **{pred} sided**")
 
     # Show what inputs model used
     st.subheader("📌 Inputs Used")
