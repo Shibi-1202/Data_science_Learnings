@@ -5,7 +5,7 @@ import numpy as np
 st.set_page_config(page_title="Balance Scale Prediction", layout="centered")
 
 # Load model
-model = joblib.load("knn_balance_model.pkl")
+model = joblib.load("knn_model.pkl")
 scaler = joblib.load("scaler.pkl")
 
 st.title("⚖️ Balance Scale Prediction App")
@@ -26,7 +26,7 @@ if st.button("Predict"):
     pred = model.predict(scaled_input)[0]
 
     st.subheader("🔍 Prediction Result:")
-    st.success(f"The Scale is **{pred}**")
+    st.success(f"The Scale is **{pred}ight sided**")
 
     # Show what inputs model used
     st.subheader("📌 Inputs Used")
